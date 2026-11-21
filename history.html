@@ -1,0 +1,70 @@
+<!-- Generated with GitHub Copilot CLI, reviewed by Symon -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History | CvSU GWA &amp; Grade Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CvSU GWA &amp; Grade Calculator home">
+        <img class="brand-logo" src="images/logo.svg" alt="CvSU GWA and Grade Calculator flat logo">
+        <span class="brand-name">CvSU GWA &amp; Grade Calculator</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="site-menu">
+          <li><a href="index.html">Calculator</a></li>
+          <li><a href="planner.html">Target Planner</a></li>
+          <li><a href="history.html" aria-current="page">History</a></li>
+          <li><a href="honors.html">Honors</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <h1>Saved Semesters</h1>
+
+    <section class="card result-card" aria-labelledby="cumulative-heading">
+      <h2 id="cumulative-heading">Cumulative GWA</h2>
+      <p class="result-number" id="cumulative-gwa" aria-live="polite">--</p>
+      <p>Total counted units: <strong id="cumulative-units">0</strong></p>
+    </section>
+
+    <p id="history-empty" class="card">No semesters saved.</p>
+
+    <section id="history-table-section" class="card" aria-labelledby="history-table-heading" hidden>
+      <h2 id="history-table-heading">Semester history</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Counted units</th>
+              <th scope="col">GWA</th>
+              <th scope="col">Subjects</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="history-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>CvSU GWA &amp; Grade Calculator</small>
+    </div>
+  </footer>
+
+  <script src="js/rules.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/history.js"></script>
+</body>
+</html>

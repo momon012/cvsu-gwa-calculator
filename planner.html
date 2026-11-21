@@ -1,0 +1,86 @@
+<!-- Generated with GitHub Copilot CLI, reviewed by Symon -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Target Planner | CvSU GWA &amp; Grade Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CvSU GWA &amp; Grade Calculator home">
+        <img class="brand-logo" src="images/logo.svg" alt="CvSU GWA and Grade Calculator flat logo">
+        <span class="brand-name">CvSU GWA &amp; Grade Calculator</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="site-menu">
+          <li><a href="index.html">Calculator</a></li>
+          <li><a href="planner.html" aria-current="page">Target Planner</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="honors.html">Honors</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <h1>Target Planner</h1>
+
+    <section class="card" aria-labelledby="planner-heading">
+      <h2 id="planner-heading">Find the needed GWA</h2>
+
+      <button class="button-secondary" id="fill-saved" type="button">
+        Fill from saved semesters
+      </button>
+
+      <form id="planner-form" novalidate>
+        <div class="form-field">
+          <label for="current-gwa">Current GWA</label>
+          <input id="current-gwa" name="currentGwa" type="text" inputmode="decimal" placeholder="1.00">
+          <p class="field-error" id="current-gwa-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="units-completed">Units completed</label>
+          <input id="units-completed" name="unitsCompleted" type="text" inputmode="decimal" placeholder="0">
+          <p class="field-error" id="units-completed-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="units-remaining">Units remaining</label>
+          <input id="units-remaining" name="unitsRemaining" type="text" inputmode="decimal" placeholder="0">
+          <p class="field-error" id="units-remaining-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="target-honor">Target honor</label>
+          <select id="target-honor" name="targetHonor"></select>
+          <p class="field-error" id="target-honor-error" aria-live="polite"></p>
+        </div>
+
+        <button type="submit">Calculate needed GWA</button>
+      </form>
+    </section>
+
+    <section class="card result-card" aria-labelledby="planner-result-heading">
+      <h2 id="planner-result-heading">Needed GWA</h2>
+      <p class="result-number" id="needed-result" aria-live="polite">--</p>
+      <p id="needed-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>CvSU GWA &amp; Grade Calculator</small>
+    </div>
+  </footer>
+
+  <script src="js/rules.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

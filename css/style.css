@@ -1,0 +1,344 @@
+/* Generated with GitHub Copilot CLI, reviewed by Symon */
+
+:root {
+  --green: #1F3D2B;
+  --sand: #E8DCC4;
+  --purple: #8B5CF6;
+  --surface: #F3ECDC;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 360px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--sand);
+  color: var(--green);
+  font-family: var(--font-system);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 2px;
+}
+
+.site-header {
+  background: var(--green);
+  color: var(--sand);
+  border-bottom: 1px solid var(--sand);
+}
+
+.header-inner {
+  width: min(100% - var(--space-4), 1120px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--sand);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: var(--space-5);
+  height: var(--space-5);
+  display: block;
+}
+
+.brand-name {
+  font-size: 1rem;
+}
+
+.site-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-menu a {
+  display: block;
+  padding: var(--space-2) 0;
+  color: var(--sand);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+}
+
+.site-menu a[aria-current="page"] {
+  border-bottom-color: var(--purple);
+  color: var(--sand);
+}
+
+.site-main {
+  flex: 1;
+  width: min(100% - var(--space-4), 1120px);
+  margin: 0 auto;
+  padding: var(--space-4) 0;
+}
+
+.site-footer {
+  background: var(--green);
+  color: var(--sand);
+  padding: var(--space-3) 0;
+}
+
+.footer-inner {
+  width: min(100% - var(--space-4), 1120px);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--green);
+  border-radius: 0;
+  padding: var(--space-4);
+}
+
+.card + .card {
+  margin-top: var(--space-3);
+}
+
+.result-number {
+  color: var(--purple);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.form-field {
+  display: grid;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: var(--space-5);
+  border: 1px solid var(--green);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--green);
+  padding: var(--space-2) var(--space-3);
+  font: inherit;
+}
+
+textarea {
+  min-height: var(--space-6);
+  resize: vertical;
+}
+
+fieldset {
+  border: 1px solid var(--green);
+  padding: var(--space-3);
+  margin: 0 0 var(--space-3);
+}
+
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: var(--space-5);
+  border: 1px solid var(--green);
+  border-radius: 0;
+  background: var(--green);
+  color: var(--sand);
+  padding: var(--space-2) var(--space-3);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-secondary {
+  background: var(--surface);
+  color: var(--green);
+}
+
+.error-text {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+th,
+td {
+  border: 1px solid var(--green);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--green);
+  color: var(--sand);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  margin-bottom: var(--space-3);
+}
+
+.calculator-card,
+.result-card {
+  margin-bottom: var(--space-3);
+}
+
+.table-wrap {
+  margin-bottom: var(--space-3);
+}
+
+table {
+  min-width: 620px;
+}
+
+input[type="checkbox"] {
+  width: var(--space-4);
+  min-height: var(--space-3);
+  margin: 0;
+  padding: 0;
+  accent-color: var(--green);
+}
+
+.field-error {
+  min-height: 1.5em;
+  margin: var(--space-1) 0 0;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.subject-field-error {
+  max-width: 220px;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: var(--space-5);
+}
+
+.result-card {
+  text-align: center;
+}
+
+.result-label {
+  margin-bottom: var(--space-1);
+  font-weight: 700;
+}
+
+.remove-row {
+  width: 100%;
+  white-space: nowrap;
+}
+
+[hidden],
+.is-hidden {
+  display: none;
+}
+
+.condition-list,
+.reason-list {
+  margin: 0;
+  padding-left: var(--space-4);
+}
+
+.condition-list li + li,
+.reason-list li + li {
+  margin-top: var(--space-2);
+}
+
+.source-note {
+  margin-top: var(--space-3);
+}
+
+.delete-confirmation {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.delete-confirmation[hidden] {
+  display: none;
+}
+
+details {
+  max-width: 260px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-menu {
+    flex-wrap: nowrap;
+  }
+}

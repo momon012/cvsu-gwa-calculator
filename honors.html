@@ -1,0 +1,111 @@
+<!-- Generated with GitHub Copilot CLI, reviewed by Symon -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Honors | CvSU GWA &amp; Grade Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CvSU GWA &amp; Grade Calculator home">
+        <img class="brand-logo" src="images/logo.svg" alt="CvSU GWA and Grade Calculator flat logo">
+        <span class="brand-name">CvSU GWA &amp; Grade Calculator</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="site-menu">
+          <li><a href="index.html">Calculator</a></li>
+          <li><a href="planner.html">Target Planner</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="honors.html" aria-current="page">Honors</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <h1>Honors Eligibility</h1>
+
+    <section class="card" aria-labelledby="gwa-heading">
+      <h2 id="gwa-heading">Cumulative GWA</h2>
+      <button class="button-secondary" id="use-saved-gwa" type="button">Use saved cumulative GWA</button>
+
+      <div class="form-field">
+        <label for="manual-gwa">GWA</label>
+        <input id="manual-gwa" name="manualGwa" type="text" inputmode="decimal" placeholder="1.00">
+        <p class="field-error" id="manual-gwa-error" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="conditions-heading">
+      <h2 id="conditions-heading">Conditions</h2>
+      <ul class="condition-list">
+        <li id="gwa-condition">GWA range: <strong>Waiting for GWA</strong></li>
+        <li id="conditional-condition">No 4.00 grade: <strong>Waiting for subject data</strong></li>
+        <li id="lowest-rule-condition">Lowest-grade rule: <strong>rule not set</strong></li>
+      </ul>
+    </section>
+
+    <section class="card result-card" aria-labelledby="honor-result-heading">
+      <h2 id="honor-result-heading">Honor level</h2>
+      <p class="result-number" id="honor-level">No honor level</p>
+      <ul id="honor-reasons" class="reason-list"></ul>
+    </section>
+
+    <section class="card" aria-labelledby="transferee-toggle-heading">
+      <h2 id="transferee-toggle-heading">Transferee check</h2>
+      <label class="checkbox-label" for="show-transferee">
+        <input id="show-transferee" type="checkbox">
+        <span>Show transferee fields</span>
+      </label>
+
+      <div id="transferee-section" class="is-hidden" hidden>
+        <div class="form-field">
+          <label for="cvsu-units">Units completed at CvSU</label>
+          <input id="cvsu-units" type="text" inputmode="decimal" placeholder="0">
+          <p class="field-error" id="cvsu-units-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="total-units">Total units completed</label>
+          <input id="total-units" type="text" inputmode="decimal" placeholder="0">
+          <p class="field-error" id="total-units-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="previous-lowest-grade">Lowest grade from previous school</label>
+          <input id="previous-lowest-grade" type="text" inputmode="decimal" placeholder="2.00">
+          <p class="field-error" id="previous-lowest-grade-error" aria-live="polite"></p>
+        </div>
+
+        <ul class="condition-list">
+          <li id="units-percent-condition">75% of units at CvSU: <strong>Waiting</strong></li>
+          <li id="previous-grade-condition">Previous-school lowest grade: <strong>Waiting</strong></li>
+          <li id="transferee-ineligible-condition">2.75 or worse is ineligible: <strong>Waiting</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Completion reminder</h2>
+      <p>Finish your studies within the prescribed period.</p>
+    </section>
+
+    <p class="source-note">Based on the CvSU orientation. Confirm with your registrar.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>CvSU GWA &amp; Grade Calculator</small>
+    </div>
+  </footer>
+
+  <script src="js/rules.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/honors.js"></script>
+</body>
+</html>

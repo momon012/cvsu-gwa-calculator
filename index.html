@@ -1,0 +1,83 @@
+<!-- Generated with GitHub Copilot CLI, reviewed by Symon -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CvSU GWA &amp; Grade Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CvSU GWA &amp; Grade Calculator home">
+        <img class="brand-logo" src="images/logo.svg" alt="CvSU GWA and Grade Calculator flat logo">
+        <span class="brand-name">CvSU GWA &amp; Grade Calculator</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="site-menu">
+          <li><a href="index.html" aria-current="page">Calculator</a></li>
+          <li><a href="planner.html">Target Planner</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="honors.html">Honors</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <h1>GWA &amp; Grade Calculator</h1>
+
+    <section class="card calculator-card" aria-labelledby="subjects-heading">
+      <h2 id="subjects-heading">Subjects</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Subject name</th>
+              <th scope="col">Units</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Counts toward GWA</th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
+          <tbody id="subjects-body"></tbody>
+        </table>
+      </div>
+
+      <button class="button-secondary" id="add-row" type="button">Add row</button>
+    </section>
+
+    <section class="card result-card" aria-label="GWA result">
+      <p class="result-label">GWA</p>
+      <p class="result-number" id="gwa-result" aria-live="polite">--</p>
+      <p>Total counted units: <strong id="counted-units">0</strong></p>
+    </section>
+
+    <section class="card" aria-labelledby="save-heading">
+      <h2 id="save-heading">Save as semester</h2>
+      <form id="save-semester-form" novalidate>
+        <div class="form-field">
+          <label for="semester-name">Semester name</label>
+          <input id="semester-name" name="semesterName" type="text" autocomplete="off">
+          <p class="error-text field-error" id="semester-name-error" aria-live="polite"></p>
+        </div>
+        <button type="submit">Save semester</button>
+        <p class="field-error" id="save-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>CvSU GWA &amp; Grade Calculator</small>
+    </div>
+  </footer>
+  <script src="js/rules.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
